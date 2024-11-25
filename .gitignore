@@ -1,0 +1,15 @@
+# Virtual Environment
+venv/
+
+# Python cache files
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# Model files (consider if you want to store these elsewhere)
+models/rickbot-small/
+models/rickbot-improved/
+
+
+# OS files
+.DS_Store
