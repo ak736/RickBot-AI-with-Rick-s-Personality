@@ -32,7 +32,7 @@ pip3 install -r requirements.txt
 
 ### 📁 Project Structure
 
-````bash
+```bash
 RICKBOT/
 ├── data/
 │   ├── processed/               # Processed training data files
@@ -65,8 +65,10 @@ RICKBOT/
 │       └── train_rickbot.py
 ├── requirements.txt           # Project dependencies
 └── Sample Image.png          # Sample conversation demonstration
+```
 
 ### Running the Project
+
 ```bash
 # 1. Preprocess data
 python3 src/data/improved_data_processor.py
@@ -76,7 +78,7 @@ python3 src/models/train_improved.py
 
 # 3. Chat with Bot
 python3 src/models/chat_with_improved_rick.py
-````
+```
 
 ## 🔧 Component Details
 
