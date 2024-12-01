@@ -164,6 +164,3 @@ Featured in the conversation:
 - Context-aware response generation
 - Character-specific text generation
 
-```
-
-```
