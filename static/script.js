@@ -13,13 +13,6 @@ function addMessage(message, isUser) {
     chatMessages.scrollTop = chatMessages.scrollHeight;
 }
 
-function clearChat() {
-    const chatMessages = document.getElementById('chatMessages');
-    chatMessages.innerHTML = '';
-    // Add back the initial greeting
-    addMessage("Wubba Lubba Dub Dub! I'm the smartest bot in the multiverse! *burp*", false);
-}
-
 async function sendMessage() {
     const userInput = document.getElementById('userMessage');
     const message = userInput.value.trim();
@@ -42,17 +35,7 @@ async function sendMessage() {
             });
             
             const data = await response.json();
-            
-            // Handle special commands
-            if (data.command === 'quit') {
-                window.location.href = '/';
-                return;
-            } else if (data.command === 'clear') {
-                clearChat();
-            } else {
-                addMessage(data.response, false);
-            }
-            
+            addMessage(data.response, false);
         } catch (error) {
             console.error('Error:', error);
             addMessage('*burp* Error in dimension C-137!', false);
