@@ -1,0 +1,40 @@
+<!-- templates/chat.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>RickBot - The Smartest Bot in the Multiverse</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="bg-light">
+    <div class="container py-4">
+        <div class="chat-container bg-white rounded-4 shadow-lg overflow-hidden">
+            <div class="chat-header bg-primary text-white p-4 text-center">
+                <h1 class="display-6 mb-2">RickBot</h1>
+                <p class="mb-1">Wubba Lubba Dub Dub! Ask me anything!</p>
+                <p class="hint small mb-0">Commands: 'science' for scientific explanations, 'clear' to clear chat, 'quit' to exit</p>
+            </div>
+
+            <div class="chat-messages p-4" id="chatMessages">
+                <!-- Messages will appear here -->
+            </div>
+
+            <div class="chat-input p-3 border-top">
+                <div class="input-group">
+                    <input type="text" id="userMessage" 
+                           class="form-control rounded-pill me-2"
+                           placeholder="What's on your mind, Morty?"
+                           autocomplete="off">
+                    <button class="btn btn-primary rounded-pill px-4" onclick="sendMessage()">Send</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!-- templates/landing.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome to RickBot</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='landing.css') }}">
+</head>
+<body>
+    <div class="container min-vh-100 d-flex align-items-center justify-content-center">
+        <div class="landing-container bg-white rounded-4 p-4 p-md-5 shadow">
+            <div class="content text-center">
+                <h1 class="display-4 text-primary mb-3">Meet RickBot</h1>
+                <p class="lead mb-4">The smartest bot in the multiverse! *burp*</p>
+
+                <div class="row g-4 mb-4">
+                    <div class="col-md-6">
+                        <div class="features bg-light rounded-3 p-4">
+                            <h2 class="h4 text-primary">What can RickBot do?</h2>
+                            <ul class="list-unstyled mt-3">
+                                <li>🔬 Talk science with 'science' prefix</li>
+                                <li>🌌 Share wisdom from across dimensions</li>
+                                <li>😏 Be sarcastic (it's free!)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="commands bg-light rounded-3 p-4">
+                            <h2 class="h4 text-primary">Chat Commands</h2>
+                            <ul class="list-unstyled mt-3">
+                                <li>🔄 'clear' - Clear the chat history</li>
+                                <li>🚪 'quit' - Return to this page</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="/chat" class="btn btn-primary btn-lg px-5 py-3 rounded-pill">Let's Chat!</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

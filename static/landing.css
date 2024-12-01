@@ -1,0 +1,92 @@
+:root {
+    --rick-green: #97ce4c;
+    --rick-dark: #4a934a;
+    --rick-hover: #86b745;
+    --bg-light: #f8f9fa;
+}
+
+body {
+    font-family: 'Inter', -apple-system, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, var(--rick-green) 0%, var(--rick-dark) 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.landing-container {
+    background: white;
+    border-radius: 16px;
+    padding: 2.5rem;
+    max-width: 800px;
+    width: 90%;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.content {
+    text-align: center;
+}
+
+h1 {
+    color: var(--rick-green);
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.features, .commands {
+    text-align: left;
+    margin: 1.5rem 0;
+    padding: 1.5rem;
+    background: var(--bg-light);
+    border-radius: 12px;
+    transition: transform 0.2s ease;
+}
+
+.features:hover, .commands:hover {
+    transform: translateY(-2px);
+}
+
+.features h2, .commands h2 {
+    color: var(--rick-dark);
+    font-size: 1.25rem;
+    margin-top: 0;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin: 0.75rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+li:before {
+    content: "→";
+    color: var(--rick-green);
+    position: absolute;
+    left: 0;
+}
+
+.chat-button {
+    display: inline-block;
+    background: var(--rick-green);
+    color: white;
+    padding: 1rem 2.5rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.chat-button:hover {
+    background: var(--rick-hover);
+    transform: translateY(-2px);
+    color: white;
+}

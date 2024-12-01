@@ -1,0 +1,134 @@
+:root {
+    --rick-green: #97ce4c;
+    --rick-dark: #4a934a;
+    --rick-hover: #86b745;
+    --user-msg: #e3f2fd;
+    --user-text: #1565c0;
+    --bg-light: #f8f9fa;
+}
+
+body {
+    font-family: 'Inter', -apple-system, sans-serif;
+    background-color: var(--bg-light);
+    margin: 0;
+    padding: 1.5rem;
+}
+
+.chat-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    overflow: hidden;
+}
+
+.chat-header {
+    background: var(--rick-green);
+    color: white;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.chat-header h1 {
+    margin: 0;
+    font-size: 1.75rem;
+    font-weight: 600;
+}
+
+.hint {
+    font-size: 0.875rem;
+    opacity: 0.9;
+    margin-top: 0.5rem;
+}
+
+.chat-messages {
+    height: 60vh;
+    overflow-y: auto;
+    padding: 1.5rem;
+    background: var(--bg-light);
+}
+
+.message {
+    margin: 0.75rem 0;
+    padding: 0.875rem 1.25rem;
+    border-radius: 12px;
+    max-width: 75%;
+    word-wrap: break-word;
+    line-height: 1.5;
+}
+
+.user-message {
+    background: var(--user-msg);
+    margin-left: auto;
+    color: var(--user-text);
+}
+
+.bot-message {
+    background: var(--rick-green);
+    color: white;
+    margin-right: auto;
+}
+
+.chat-input {
+    padding: 1.25rem;
+    background: white;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.input-group {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.chat-input input {
+    flex: 1;
+    padding: 0.875rem 1.25rem;
+    border: 2px solid var(--rick-green);
+    border-radius: 50px;
+    outline: none;
+    font-size: 1rem;
+    transition: border-color 0.2s ease;
+}
+
+.chat-input input:focus {
+    border-color: var(--rick-dark);
+}
+
+.chat-input button {
+    background: var(--rick-green);
+    color: white;
+    border: none;
+    padding: 0.875rem 1.75rem;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.2s ease;
+}
+
+.chat-input button:hover {
+    background: var(--rick-hover);
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 1rem;
+    }
+    
+    .chat-messages {
+        height: 50vh;
+    }
+    
+    .message {
+        max-width: 85%;
+    }
+    
+    .chat-input {
+        padding: 1rem;
+    }
+    
+    .chat-input input, 
+    .chat-input button {
+        padding: 0.75rem 1.25rem;
+    }
+}
